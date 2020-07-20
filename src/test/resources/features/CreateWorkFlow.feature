@@ -5,7 +5,7 @@ Feature:
   from ""More"" tab under Activity Stream."
 
   Scenario:User should be able to request a Leave Approval by
-  Given
+ Given
   assigning approvers and processors; selecting start and ending date from date picker; select Absence type from dropdown; and entering reason for leave information.
 
   Scenario: User should be able to request a Business Trip by:

@@ -1,12 +1,31 @@
-@win
+
 Feature:
   Agile Story: 2
   "2. As a user, I should be able to assign
   tasks by clicking on Task tab under Active Stream."
 
+
+
+    Scenario Outline:
+    Given when a user enters <username> and <password>
+
+
+
+      Examples:
+        | username                      | password |
+        | helpdesk1@cybertekschool.com  | UserUser |
+        | helpdesk2@cybertekschool.com  | UserUser |
+        | marketing1@cybertekschool.com | UserUser |
+        | marketing2@cybertekschool.com | UserUser |
+        | hr1@cybertekschool.com        | UserUser |
+        | hr2@cybertekschool.com        | UserUser |
+
   Scenario:
-  Given "1. User should be able to click on ""High Priority"" checkbox to set the current task to a top priority task.
- Scenario:
+    Given User should be able to click on High Priority checkbox to set the current task to a top priority task
+    Then current task should  be set to High Periority
+
+
+  Scenario:
  Given 2. User should be able to click on Visual Editor and see the editor text-bar displays on top of the message box.
   Scenario:
   Given 3. User should be able to click on upload files icon to upload files and pictures from local disks, download from external drive, select documents from bixtrix24, and create files to upload.

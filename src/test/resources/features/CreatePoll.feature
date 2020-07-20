@@ -4,10 +4,10 @@ Feature:
   poll by clicking on Poll tab under Active Stream."
 
   Scenario:
-   Given
+  Given
    "1. User should be able to click on upload files icon to upload files and pictures from local disks, download from external drive, select documents from bixtrix24, and create files to upload.
   Scenario:
-  Given
+ Given
   2. User should be able to add users from selecting contact from E-mail user, Employees and Departments and Recent contact lists.
  Scenario:
  Given 3. User should be able to attach link by clicking on the link icon.
