@@ -7,9 +7,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = "html:target/cucumber-report.html",
-        features = "src/test/resources",
+        features = "src/test/resources/features",
         glue = "src/test/java/com/Bitrix24/StepDifinations",
-
         dryRun = false,
         tags = "@win"
 

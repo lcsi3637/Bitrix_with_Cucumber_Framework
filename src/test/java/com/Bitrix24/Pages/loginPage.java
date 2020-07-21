@@ -18,14 +18,28 @@ public class loginPage extends BasePage {
    @FindBy(xpath = "//input[@type='submit']")
    private WebElement submitButton;
 
-   public void login(String userName, String passWord){
-      wait.until(ExpectedConditions.visibilityOf(username)).sendKeys(userName);
-      wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(passWord);
-      wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+   public WebElement enterUsername() {
+      return username;
+   }
+
+   public WebElement enterPassword() {
+      return password;
+   }
+
+   public WebElement clickSubmitButton() {
+      return submitButton;
+   }
+
+
+
+   public void login(String UserName, String Password){
+      wait.until(ExpectedConditions.visibilityOf(enterUsername())).sendKeys(UserName);
+      wait.until(ExpectedConditions.visibilityOf(enterPassword())).sendKeys(Password);
+      wait.until(ExpectedConditions.elementToBeClickable(clickSubmitButton())).click();
 
 
    }
-   public void login(){
+   public void loginFromConfig(){
       wait.until(ExpectedConditions.visibilityOf(username)).sendKeys(ConfigurationReader.getProperty("username"));
        wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(ConfigurationReader.getProperty("password"));
        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
