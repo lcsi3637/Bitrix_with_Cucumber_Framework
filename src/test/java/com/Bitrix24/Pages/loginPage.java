@@ -1,6 +1,7 @@
 package com.Bitrix24.Pages;
 
 import com.Bitrix24.Utilities.ConfigurationReader;
+import com.Bitrix24.Utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,6 +45,9 @@ public class loginPage extends BasePage {
        wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(ConfigurationReader.getProperty("password"));
        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
 
+   }
+   public void browseLoginPage(){
+      Driver.getDriver().get(ConfigurationReader.getProperty("url"));
    }
 
 }

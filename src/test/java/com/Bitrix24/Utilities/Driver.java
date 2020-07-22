@@ -8,6 +8,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class Driver {
    private static WebDriver driver;
@@ -59,8 +63,17 @@ public class Driver {
                WebDriverManager.iedriver().setup();
                driver=new InternetExplorerDriver();
                break;
+            case "chrome-remote":
+               try {
+                  ChromeOptions chromeOptionsptions= new ChromeOptions();
+
+                 URL url = new URL("http://100.26.155.48:4444/wd/hub");
+                 driver= new RemoteWebDriver(url, chromeOptionsptions);
+                  } catch (MalformedURLException e) {
+                     e.printStackTrace();
+               }
             default:
-               System.out.println("No Such Driver");
+               throw new RuntimeException("No Such Browser!!"+browser);
 
 
          }
