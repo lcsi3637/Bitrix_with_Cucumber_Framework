@@ -31,6 +31,9 @@ public class loginPage extends BasePage {
       return submitButton;
    }
 
+   public void browseLoginPage(){
+      Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+   }
 
 
    public void login(String UserName, String Password){
@@ -40,14 +43,12 @@ public class loginPage extends BasePage {
 
 
    }
+
    public void loginFromConfig(){
       wait.until(ExpectedConditions.visibilityOf(username)).sendKeys(ConfigurationReader.getProperty("username"));
        wait.until(ExpectedConditions.visibilityOf(password)).sendKeys(ConfigurationReader.getProperty("password"));
        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
 
-   }
-   public void browseLoginPage(){
-      Driver.getDriver().get(ConfigurationReader.getProperty("url"));
    }
 
 }

@@ -17,5 +17,5 @@ import org.junit.runner.RunWith;
 
 )
 
-public class CukeRunner {
+public class ClassRunner {
 }

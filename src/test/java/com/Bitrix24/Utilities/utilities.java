@@ -11,10 +11,5 @@ public class utilities {
         Driver.getDriver().manage().window().maximize();
     }
 
-    public static void takeScreenShot() {
 
-
-
-
-    }
 }
