@@ -25,7 +25,6 @@ public void setupDriver(){
             byte[] screenShot= ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenShot, "image/png", scenario.getName());
 
-            System.out.println("I added something here");
         }
         Driver.closeDriver();
 
