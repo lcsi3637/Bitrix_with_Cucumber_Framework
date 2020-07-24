@@ -1,5 +1,6 @@
 package com.Bitrix24.Pages;
 
+import com.Bitrix24.Utilities.BrowserUtilities;
 import com.Bitrix24.Utilities.ConfigurationReader;
 import com.Bitrix24.Utilities.Driver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,7 @@ public class loginPage extends BasePage {
 
    public void browseLoginPage(){
       Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+
    }
 
 
